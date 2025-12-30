@@ -177,22 +177,21 @@ Upload Excel/CSV, optionally attach PDFs, and send personalised emails in one cl
 <label for="subject">Subject</label>
 <input type="text" id="subject" name="subject" placeholder="Enter email subject" value="{{ request.form.subject or '' }}">
 
-<!-- Font Family Dropdown -->
 <label for="fontFamily">Font Family (Body & Signature)</label>
 <select id="fontFamily" name="fontFamily">
-<option value="Arial, Helvetica, sans-serif" selected>Sans Serif</option>
-<option value="'Times New Roman', Times, serif">Serif</option>
-<option value="'Courier New', Courier, monospace">Fixed Width</option>
-<option value="Impact, Charcoal, sans-serif">Wide</option>
-<option value="'Arial Narrow', Arial, sans-serif">Narrow</option>
-<option value="'Comic Sans MS', cursive">Comic Sans MS</option>
-<option value="Garamond, serif">Garamond</option>
-<option value="Georgia, serif">Georgia</option>
-<option value="Tahoma, Geneva, sans-serif">Tahoma</option>
-<option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
-<option value="Verdana, Geneva, sans-serif">Verdana</option>
+  <option value="Arial, Helvetica, sans-serif" style="font-family:Arial, Helvetica, sans-serif;" selected>Sans Serif</option>
+  <option value="'Times New Roman', Times, serif" style="font-family:'Times New Roman', Times, serif;">Serif</option>
+  <option value="'Courier New', Courier, monospace" style="font-family:'Courier New', Courier, monospace;">Fixed Width</option>
+  <option value="Impact, Charcoal, sans-serif" style="font-family:Impact, Charcoal, sans-serif;">Wide</option>
+  <option value="'Arial Narrow', Arial, sans-serif" style="font-family:'Arial Narrow', Arial, sans-serif;">Narrow</option>
+  <option value="'Comic Sans MS', cursive" style="font-family:'Comic Sans MS', cursive;">Comic Sans MS</option>
+  <option value="Garamond, serif" style="font-family:Garamond, serif;">Garamond</option>
+  <option value="Georgia, serif" style="font-family:Georgia, serif;">Georgia</option>
+  <option value="Tahoma, Geneva, sans-serif" style="font-family:Tahoma, Geneva, sans-serif;">Tahoma</option>
+  <option value="'Trebuchet MS', Helvetica, sans-serif" style="font-family:'Trebuchet MS', Helvetica, sans-serif;">Trebuchet MS</option>
+  <option value="Verdana, Geneva, sans-serif" style="font-family:Verdana, Geneva, sans-serif;">Verdana</option>
 </select>
-<div class="hint">Applies to both email body and signature (preview & sent emails).</div>
+<div class="hint">Applies to both email body and signature.</div>
 
 <label for="body">Email Body</label>
 <textarea id="body" name="body" class="preview-body-font" placeholder="Type your email body here. Use {name} for first name.">{{ request.form.body or '' }}</textarea>
